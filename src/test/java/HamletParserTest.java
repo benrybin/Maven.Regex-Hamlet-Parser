@@ -15,17 +15,42 @@ public class HamletParserTest {
 
     @Test
     public void testChangeHamletToLeon() {
+        String test = hamletParser.nameReplace("Hamlet","Leon");
+
+
+        Boolean actual = test.contains("Hamlet");
+        Boolean expected = false;
+
+        assertEquals(actual,expected);
+
     }
 
     @Test
     public void testChangeHoratioToTariq() {
+        String test = hamletParser.nameReplace("Horatio","Tariq");
+
+       Boolean actual = test.contains("Horatio");
+       Boolean expected = false;
+
+       assertEquals(actual,expected);
     }
 
     @Test
     public void testFindHoratio() {
+
+
+        Boolean actual = hamletText.contains("Horatio");
+        Boolean expected = true;
+
+        assertEquals(actual,expected);
+
     }
 
     @Test
     public void testFindHamlet() {
+        Boolean actual = hamletText.contains("Hamlet");
+        Boolean expected = true;
+
+        assertEquals(actual,expected);
     }
 }
